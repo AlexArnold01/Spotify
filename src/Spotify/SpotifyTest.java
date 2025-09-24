@@ -1,14 +1,65 @@
 package Spotify;
-import java.util.ArrayList;
+
+import java.util.Scanner;
 
 public class SpotifyTest {
+
     public static void main(String[] args) {
         welcomeMessage();
+        appLoop();
     }
 
     public static void welcomeMessage() {
-        String welcomeMessage = ("Welcome to your homemade Spotify! Please choose an option:")
+        System.out.println("Welcome to your homemade Spotify! Please choose an option:");
     }
 
+    public static void appLoop() {
+        Playlist playlist = new Playlist();
+        Scanner sc = new Scanner(System.in);
+        boolean keepAlive = true;
+        while(keepAlive) {
+            System.out.println("1. Tilføj ny sang");
+            System.out.println("2. Fjern en sang");
+            System.out.println("3. Vis alle sange");
+            System.out.println("4. Søg efter en sang");
+            System.out.println("5. Rediger en sang");
+            System.out.println("6. Afslut programmet");
+            int input = sc.nextInt();
+            sc.nextLine();  //calling nextLine in order to consume 'Enter'-key input
+
+            switch(input) {
+                case 1:
+                    System.out.println("1");
+                    System.out.println("Vælg en titel");
+                    String title = sc.nextLine();
+                    System.out.println("Vælg en kunstner");
+                    String artist = sc.nextLine();
+//                    System.out.println("Vælg en genre");
+                    playlist.addSong(title, artist, Genre.JAZZ);
+                    break;
+                case 2:
+                    System.out.println("Vælg hvilken sang du vil fjerne: ");
+                    String titleRemove = sc.nextLine();
+                    playlist.removeSong(titleRemove);
+
+                    break;
+                case 3:
+                    playlist.printPlaylist();
+                    //System.out.println(playlist.toString());
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    System.out.println("Lukker programmet ned...");
+                    keepAlive = false;
+                    break;
+                default:
+                    System.out.println("invalid");
+                    break;
+            }
+        }
+    }
 
 }
