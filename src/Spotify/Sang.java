@@ -37,4 +37,7 @@ public boolean equals(Object obj) {
     return title.equalsIgnoreCase(sang.title) &&
             artist.equalsIgnoreCase(sang.artist);
 }
+public String getSong(){
+        return title + " " + artist + " " + genre;
+}
 }
