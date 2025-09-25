@@ -41,9 +41,8 @@ public class SpotifyTest {
                     playlist.removeSong(sc);
                     break;
                 case 3:
-                    System.out.println();
-                    playlist.printPlaylist();
                     //System.out.println(playlist.toString());
+                    playlist.printPlaylist();
                     break;
                 case 4:
                     break;
@@ -54,7 +53,7 @@ public class SpotifyTest {
                     keepAlive = false;
                     break;
                 default:
-                    System.out.println("invalid");
+                    System.out.println("Vælg venligst en gyldig mulighed.\n");
                     break;
             }
         }
