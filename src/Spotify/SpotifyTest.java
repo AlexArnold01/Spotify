@@ -24,10 +24,10 @@ public class SpotifyTest {
             System.out.println("4. Søg efter en sang");
             System.out.println("5. Rediger en sang");
             System.out.println("6. Afslut programmet");
-            int input = sc.nextInt();
+            int userInput = sc.nextInt();
             sc.nextLine();  //calling nextLine in order to consume 'Enter'-key input
 
-            switch(input) {
+            switch(userInput) {
                 case 1:
                     System.out.println("1");
                     System.out.println("Vælg en titel");
@@ -38,11 +38,10 @@ public class SpotifyTest {
                     playlist.addSong(title, artist, Genre.JAZZ);
                     break;
                 case 2:
-                    System.out.println("Vælg hvilken sang du vil fjerne: ");
-                    playlist.removeSong(sc.nextInt());
-
+                    playlist.removeSong(sc);
                     break;
                 case 3:
+                    System.out.println();
                     playlist.printPlaylist();
                     //System.out.println(playlist.toString());
                     break;

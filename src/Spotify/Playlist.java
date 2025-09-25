@@ -1,6 +1,7 @@
 package Spotify;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Playlist {
     private ArrayList<Sang> playlist = new ArrayList<>();
@@ -25,15 +26,20 @@ public class Playlist {
         return playlist.toString();
     }
 
-    public void removeSong(int songNum) {
-        try {
-            Sang removed = playlist.remove(songNum);
-            System.out.println("Removed: " + removed.getSong());
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Skriv gerne en valid Sang :)");
+    public void removeSong(Scanner sc) {
+        boolean valid = false;
+        while (!valid) {
+            try {
+                System.out.println("Vælg hvilken sang du vil fjerne: ");
+                int songNum = sc.nextInt();
+                Sang removed = playlist.remove(songNum);
+                System.out.println("Fjernet: " + removed.getSong());
+                valid = true;
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Skriv gerne en valid Sang :)");
+            }
         }
-        }
-        //  skal laves om til en try catch metode
+    }
 
 
     public void printPlaylist() {
