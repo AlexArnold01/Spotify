@@ -3,7 +3,7 @@ package Spotify;
 import java.util.ArrayList;
 
 public class Playlist {
-    private ArrayList<Sang> playlist = new ArrayList<Sang>();
+    private ArrayList<Sang> playlist = new ArrayList<>();
 
     public Playlist(){
     }
@@ -30,7 +30,7 @@ public class Playlist {
     }
 
     public void printPlaylist() {
-        System.out.println("------PLAYLISTE-----");
+        System.out.println("------PLAYLISTE------\n");
         for(Sang sang : playlist) {
             System.out.println("Title: " + sang.getTitle() + ", Kunstner: " + sang.getArtist() + "\n");
         }
