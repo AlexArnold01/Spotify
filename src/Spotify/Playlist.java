@@ -28,7 +28,7 @@ public class Playlist {
     public void removeSong(int songNum) {
         try {
             Sang removed = playlist.remove(songNum);
-            System.out.println("Removed: " + songNum.toString());
+            System.out.println("Removed: " + removed.getSong());
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Skriv gerne en valid Sang :)");
         }
