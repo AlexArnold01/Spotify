@@ -1,7 +1,5 @@
 
 package Spotify;
-import java.util.ArrayList;
-
 
 
 public class Sang {
@@ -15,7 +13,6 @@ public class Sang {
     Sang(String title, String artist, Genre genre) {
         this.title = title;
         this.artist = artist;
-
     }
     //getters
     public String getTitle() {return title;}

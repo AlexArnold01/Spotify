@@ -39,7 +39,7 @@ public class SpotifyTest {
                     break;
                 case 2:
                     System.out.println("Vælg hvilken sang du vil fjerne: ");
-                    String titleRemove = sc.nextLine();
+                    playlist.removeSong(sc.nextInt());
 
                     break;
                 case 3:
