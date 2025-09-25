@@ -1,5 +1,6 @@
 package Spotify;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Playlist {
@@ -25,8 +26,13 @@ public class Playlist {
         return playlist.toString();
     }
 
-    public void removeSong(String title) {
-        playlist.removeIf(sang -> title.equals(sang.getTitle()));
+    public void removeSong(int index) {
+        try {
+            Sang removed = sang.remove(index);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Skriv gerne en valid Sang :)");
+        }
+        }
         //  skal laves om til en try catch metode
     }
 
@@ -36,5 +42,5 @@ public class Playlist {
             System.out.println("Title: " + sang.getTitle() + ", Kunstner: " + sang.getArtist() + "\n");
         }
     }
-}
+
 
