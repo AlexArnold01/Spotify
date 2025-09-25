@@ -27,6 +27,7 @@ public class Playlist {
 
     public void removeSong(String title) {
         playlist.removeIf(sang -> title.equals(sang.getTitle()));
+        //  skal laves om til en try catch metode
     }
 
     public void printPlaylist() {
