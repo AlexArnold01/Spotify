@@ -29,16 +29,18 @@ public class SpotifyTest {
 
             switch(userInput) {
                 case 1:
-                    System.out.println("1");
+                    System.out.println("Du har valgt at tilføje en sang.");
                     System.out.println("Vælg en titel");
                     String title = sc.nextLine();
                     System.out.println("Vælg en kunstner");
                     String artist = sc.nextLine();
 //                    System.out.println("Vælg en genre");
+//                    Genre genre = Genre.valueOf(sc.nextLine());
                     playlist.addSong(title, artist, Genre.JAZZ);
                     break;
                 case 2:
                     playlist.removeSong(sc);
+
                     break;
                 case 3:
                     //System.out.println(playlist.toString());

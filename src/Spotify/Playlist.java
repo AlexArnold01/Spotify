@@ -30,7 +30,7 @@ public class Playlist {
         boolean valid = false;
         while (!valid) {
             try {
-                System.out.println("Vælg hvilken sang du vil fjerne: ");
+                System.out.print("Vælg hvilken sang du vil fjerne: ");
                 int songNum = sc.nextInt();
                 Sang removed = playlist.remove(songNum);
                 System.out.println("Fjernet: " + removed.getSong());

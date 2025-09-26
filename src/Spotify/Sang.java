@@ -10,7 +10,7 @@ public class Sang {
 
 
         //Constructor
-    Sang(String title, String artist, Genre genre) {
+    public Sang(String title, String artist, Genre genre) {
         this.title = title;
         this.artist = artist;
         this.genre = genre;
